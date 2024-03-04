@@ -54,6 +54,15 @@ English | [简体中文](README_zh-CN.md)
     <img src="https://user-images.githubusercontent.com/25839884/219026120-ba71e48b-6e94-4bd4-b4e9-b7d175b5e362.png" width="3%" alt="" /></a>
 </div>
 
+## Max's DACL10K Task-Transfer Experiments
+
+Back in 2021 I wrote a confluence page about using monocular depth estimation as a pretraining for a civil engineering
+pre-trained encoder. But alas I did not have civil inspection dataset nor did I have enough depth data to make it work.
+
+In 2024 we now have Depth-Anything, DACL10K and our own LiDAR RGB-D dataset of bridges in the KW region. 
+
+Borrowing a line from 2-minute papers... "What a time to be alive!"
+
 ## Introduction
 
 MMSegmentation is an open source semantic segmentation toolbox based on PyTorch.
