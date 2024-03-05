@@ -19,6 +19,7 @@ model = dict(
     backbone=dict(
         type='DINOv2',
         version='large',
+        load_from='./checkpoints/depth_anything_vitl14.pth',
         freeze=False),
     neck=dict(type='Feature2Pyramid', embed_dim=1024, rescales=[4, 2, 1, 0.5]),
     decode_head=dict(
@@ -94,12 +95,12 @@ model = dict(
             use_sigmoid=False,
             loss_weight=2.0,
             reduction='mean',
-            class_weight=[1.0, 0.1, 0.1]),  # Change this based on class distribution mk1_1.0_0.25_0.1
+            class_weight=[1.5, 0.1, 0.1]),  # Change this based on class distribution mk1_1.0_0.25_0.1
         loss_mask=dict(
             type='mmdet.CrossEntropyLoss',
             use_sigmoid=True,
             reduction='mean',
-            loss_weight=5.0),
+            loss_weight=3.0), # use to be 5
         loss_dice=dict(
             type='mmdet.DiceLoss',
             use_sigmoid=True,
@@ -200,7 +201,7 @@ param_scheduler = [
 
 # training schedule for 160k
 train_cfg = dict(
-    type='IterBasedTrainLoop', max_iters=80000, val_interval=5000)
+    type='IterBasedTrainLoop', max_iters=80000, val_interval=1000)
 val_cfg = dict(type='ValLoop')
 test_cfg = dict(type='TestLoop')
 default_hooks = dict(
@@ -208,7 +209,7 @@ default_hooks = dict(
     logger=dict(type='LoggerHook', interval=50, log_metric_by_epoch=False),
     param_scheduler=dict(type='ParamSchedulerHook'),
     checkpoint=dict(
-        type='CheckpointHook', by_epoch=False, interval=5000, save_best='mIoU', max_keep_ckpts=1),
+        type='CheckpointHook', by_epoch=False, interval=1000, save_best='mIoU', max_keep_ckpts=1),
     sampler_seed=dict(type='DistSamplerSeedHook'),
     visualization=dict(type='SegVisualizationHook'))
 
@@ -218,4 +219,4 @@ default_hooks = dict(
 #   - `base_batch_size` = (8 GPUs) x (2 samples per GPU).
 auto_scale_lr = dict(enable=False, base_batch_size=16)
 
-work_dir = './work_dirs/dacl10k_vitl14_dinov2_efflor'
+work_dir = './work_dirs/dacl10k_depthanything_efflor'
