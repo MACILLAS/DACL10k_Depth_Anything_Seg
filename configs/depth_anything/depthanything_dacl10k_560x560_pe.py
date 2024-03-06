@@ -1,5 +1,5 @@
 _base_ = [
-    '../_base_/default_runtime.py', '../_base_/datasets/dacl10kspall.py'
+    '../_base_/default_runtime.py', '../_base_/datasets/dacl10kpe.py'
 ]
 
 crop_size = (560, 560)
@@ -19,6 +19,7 @@ model = dict(
     backbone=dict(
         type='DINOv2',
         version='large',
+        load_from='./checkpoints/depth_anything_vitl14.pth',
         freeze=False),
     neck=dict(type='Feature2Pyramid', embed_dim=1024, rescales=[4, 2, 1, 0.5]),
     decode_head=dict(
@@ -218,4 +219,4 @@ default_hooks = dict(
 #   - `base_batch_size` = (8 GPUs) x (2 samples per GPU).
 auto_scale_lr = dict(enable=False, base_batch_size=16)
 
-work_dir = './work_dirs/dacl10k_vitl14_dinov2_spall'
+work_dir = './work_dirs/dacl10k_vitl14_depthanything_pe'

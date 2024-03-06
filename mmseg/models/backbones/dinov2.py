@@ -16,7 +16,7 @@ class DINOv2(nn.Module):
         
         if version == 'large':
             self.dinov2 = torch.hub.load('torchhub/facebookresearch_dinov2_main', 'dinov2_vitl14', source='local', pretrained=False)
-            #self.dinov2 = torch.hub.load('torchhub/facebookresearch_dinov2_main', 'dinov2_vitl14', source='local', pretrained=True)
+            #self.dinov2 = torch.hub.load('torchhub/facebookresearch_dinov2_main', 'dinov2_vitl14', source='local', pretrained=True) # Uncomment to use Dinov2 pretrained
         else:
             raise NotImplementedError
 

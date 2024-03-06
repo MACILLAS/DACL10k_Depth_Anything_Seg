@@ -63,7 +63,7 @@ class Dacl10kRust(BaseSegDataset):
     """
     METAINFO = dict(
         classes=('Rust', 'Background'),
-        # palette=[[190, 153, 153]]
+        palette=[[190, 153, 153], [0, 0, 0]]
     )
 
     def __init__(self, img_suffix='.jpg', seg_map_suffix='_cls_4.png', **kwargs) -> None:
@@ -79,7 +79,7 @@ class Dacl10kSpall(BaseSegDataset):
     """
     METAINFO = dict(
         classes=('Spalling', 'Background'),
-        # palette=[[107, 142, 35]]
+        palette=[[107, 142, 35], [0, 0, 0]]
     )
 
     def __init__(self, img_suffix='.jpg', seg_map_suffix='_cls_8.png', **kwargs) -> None:
@@ -95,7 +95,7 @@ class Dacl10kPE(BaseSegDataset):
     """
     METAINFO = dict(
         classes=('PEquipment', 'Background'),
-        # palette=[[0, 80, 100]]
+        palette=[[0, 80, 100], [0, 0, 0]]
     )
 
     def __init__(self, img_suffix='.jpg', seg_map_suffix='_cls_16.png', **kwargs) -> None:

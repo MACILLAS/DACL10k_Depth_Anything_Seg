@@ -63,6 +63,29 @@ In 2024 we now have Depth-Anything, DACL10K and our own LiDAR RGB-D dataset of b
 
 Borrowing a line from 2-minute papers... "What a time to be alive!"
 
+### Set-up Instructions
+You will need am Ampere Architecture GPU with 24GB (e.g., 3090, 4090, A5000)
+and Nvidia Driver that can support CudaToolKit 11.7+ (i.e., 525, 535)
+
+* Create a conda environment with the provided environment.yml file.
+* Follow the segm instructions from DepthAnything
+* Run Training 
+
+P.S. change line 18-19 in mmseg/models/backbones/dinov2.py
+To toggle whether to load Dinov2 or depthanything initialized
+
+```
+python tools/train.py configs/depth_anything/dinov2_dacl10k_560x560_efflor.py
+```
+
+### Preliminary Results
+
+| Class | Encoder                | val_IoU (%) | Step | Exp_ID          |
+| ------ |------------------------|-------------|------|-----------------|
+| Efflor | Vitl14 DINOV2 | 53.97       | 32K  | 20240304_200617 |
+| Efflor | Vitl14 DepthAnything   | 56.24       | 29K  | 20240305_152221 |
+
+
 ## Introduction
 
 MMSegmentation is an open source semantic segmentation toolbox based on PyTorch.

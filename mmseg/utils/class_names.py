@@ -476,21 +476,57 @@ def bdd100k_palette():
 def dacl10k_classes():
     """dacl10k classes for external use."""
     return ['Crack', 'ACrack', 'Wetspot', 'Efflorescence', 'Rust', 'Rockpocket', 'Hollowareas', 'Cavity',
-                   'Spalling', 'Graffiti', 'Weathering', 'Restformwork', 'ExposedRebars',
-                   'Bearing', 'EJoint', 'Drainage', 'PEquipment', 'JTape', 'WConccor']
+            'Spalling', 'Graffiti', 'Weathering', 'Restformwork', 'ExposedRebars',
+            'Bearing', 'EJoint', 'Drainage', 'PEquipment', 'JTape', 'WConccor']
+
+
+def dacl10krust_classes():
+    return ['Rust', 'Background']
+
+def dacl10kcrack_classes():
+    return ['Crack', 'Background']
+
 
 def dacl10kefflor_classes():
     return ['Efflorescence', 'Background']
+
+
+def dacl10kspall_classes():
+    return ['Spalling', 'Background']
+
+
+def dacl10kpe_classes():
+    return ['PEquipment', 'Background']
+
+
 def dacl10k_palette():
     """dacl10k palette for external use."""
     return [[128, 64, 128], [244, 35, 232], [70, 70, 70], [102, 102, 156],
-                 [190, 153, 153], [153, 153, 153], [250, 170, 30], [220, 220, 0],
-                 [107, 142, 35], [152, 251, 152], [70, 130, 180],
-                 [220, 20, 60], [255, 0, 0], [0, 0, 142], [0, 0, 70],
-                 [0, 60, 100], [0, 80, 100], [0, 0, 230], [119, 11, 32]]
+            [190, 153, 153], [153, 153, 153], [250, 170, 30], [220, 220, 0],
+            [107, 142, 35], [152, 251, 152], [70, 130, 180],
+            [220, 20, 60], [255, 0, 0], [0, 0, 142], [0, 0, 70],
+            [0, 60, 100], [0, 80, 100], [0, 0, 230], [119, 11, 32]]
+
+
+def dacl10krust_palette():
+    return [[190, 153, 153], [0, 0, 0]]
+
+
+def dacl10kcrack_palette():
+    return [[128, 64, 128], [0, 0, 0]]
+
+
+def dacl10kpe_palette():
+    return [[0, 80, 100], [0, 0, 0]]
+
 
 def dacl10kefflor_palette():
     return [[102, 102, 156], [0, 0, 0]]
+
+
+def dacl10kspall_palette():
+    return [[107, 142, 35], [0, 0, 0]]
+
 
 dataset_aliases = {
     'cityscapes': ['cityscapes'],
@@ -512,7 +548,11 @@ dataset_aliases = {
     'mapillary_v2': ['mapillary_v2'],
     'bdd100k': ['bdd100k'],
     'dacl10k': ['dacl10k'],
-    'dacl10kefflor': ['dacl10kefflor']
+    'dacl10kefflor': ['dacl10kefflor'],
+    'dacl10kspall': ['dacl10kspall'],
+    'dacl10kpe': ['dacl10kpe'],
+    'dacl10kcrack': ['dacl10kcrack'],
+
 }
 
 
