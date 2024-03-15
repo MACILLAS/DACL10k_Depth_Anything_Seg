@@ -84,6 +84,10 @@ python tools/train.py configs/depth_anything/dinov2_dacl10k_560x560_efflor.py
 | ------ |------------------------|-------------|------|-----------------|
 | Efflor | Vitl14 DINOV2 | 53.97       | 32K  | 20240304_200617 |
 | Efflor | Vitl14 DepthAnything   | 56.24       | 29K  | 20240305_152221 |
+|PE | VitL14 DINOV2 | 82.18       | 38K  | 20240306_162606 |
+| PE | Vitl14 DepthAnything | 84.98       | 43K  | 20240313_160047 |
+| Spall | Vitl14 DINOV2 | 60.84       | 50K  | 20240306_162912 |
+| Spall | Vitl14 DepthAnything | 64.57       | 29K  | 20240314_160028 |
 
 
 ## Introduction

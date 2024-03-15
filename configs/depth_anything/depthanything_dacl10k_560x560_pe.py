@@ -11,7 +11,7 @@ data_preprocessor = dict(
     pad_val=0,
     seg_pad_val=255,
     size=crop_size)
-num_classes = 1
+num_classes = 2
 
 model = dict(
     type='EncoderDecoder',
@@ -100,7 +100,7 @@ model = dict(
             type='mmdet.CrossEntropyLoss',
             use_sigmoid=True,
             reduction='mean',
-            loss_weight=5.0),
+            loss_weight=3.0), # 5
         loss_dice=dict(
             type='mmdet.DiceLoss',
             use_sigmoid=True,
@@ -201,7 +201,7 @@ param_scheduler = [
 
 # training schedule for 160k
 train_cfg = dict(
-    type='IterBasedTrainLoop', max_iters=80000, val_interval=5000)
+    type='IterBasedTrainLoop', max_iters=80000, val_interval=1000)
 val_cfg = dict(type='ValLoop')
 test_cfg = dict(type='TestLoop')
 default_hooks = dict(
@@ -209,7 +209,7 @@ default_hooks = dict(
     logger=dict(type='LoggerHook', interval=50, log_metric_by_epoch=False),
     param_scheduler=dict(type='ParamSchedulerHook'),
     checkpoint=dict(
-        type='CheckpointHook', by_epoch=False, interval=5000, save_best='mIoU', max_keep_ckpts=1),
+        type='CheckpointHook', by_epoch=False, interval=1000, save_best='mIoU', max_keep_ckpts=1),
     sampler_seed=dict(type='DistSamplerSeedHook'),
     visualization=dict(type='SegVisualizationHook'))
 

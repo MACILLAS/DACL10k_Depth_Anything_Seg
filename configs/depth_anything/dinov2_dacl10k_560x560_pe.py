@@ -11,7 +11,7 @@ data_preprocessor = dict(
     pad_val=0,
     seg_pad_val=255,
     size=crop_size)
-num_classes = 1
+num_classes = 2
 
 model = dict(
     type='EncoderDecoder',
