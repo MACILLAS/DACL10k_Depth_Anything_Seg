@@ -480,8 +480,65 @@ def dacl10k_classes():
             'Bearing', 'EJoint', 'Drainage', 'PEquipment', 'JTape', 'WConccor']
 
 
+def dacl10kwconccor_classes():
+    return ['WConccor', 'Background']
+
+
+def dacl10kjtape_classes():
+    return ['JTape', 'Background']
+
+
+def dacl10kdrainage_classes():
+    return ['Drainage', 'Background']
+
+
+def dacl10kejoint_classes():
+    return ['EJoint', 'Background']
+
+
+def dacl10kbearing_classes():
+    return ['Bearing', 'Background']
+
+
+def dacl10kexposedrebars_classes():
+    return ['ExposedRebars', 'Background']
+
+
+def dacl10krestformwork_classes():
+    return ['Restformwork', 'Background']
+
+
+def dacl10kweathering_classes():
+    return ['Weathering', 'Background']
+
+
+def dacl10kgraffiti_classes():
+    return ['Graffiti', 'Background']
+
+
+def dacl10kcavity_classes():
+    return ['Cavity', 'Background']
+
+
+def dacl10khollowareas_classes():
+    return ['Hollowareas', 'Background']
+
+
+def dacl10krockpocket_classes():
+    return ['Rockpocket', 'Background']
+
+
+def dacl10kwetspot_classes():
+    return ['Wetspot', 'Background']
+
+
+def dacl10kacrack_classes():
+    return ['ACrack', 'Background']
+
+
 def dacl10krust_classes():
     return ['Rust', 'Background']
+
 
 def dacl10kcrack_classes():
     return ['Crack', 'Background']
@@ -506,6 +563,61 @@ def dacl10k_palette():
             [107, 142, 35], [152, 251, 152], [70, 130, 180],
             [220, 20, 60], [255, 0, 0], [0, 0, 142], [0, 0, 70],
             [0, 60, 100], [0, 80, 100], [0, 0, 230], [119, 11, 32]]
+
+
+def dacl10kwconccor_palette():
+    return [[119, 11, 32], [0, 0, 0]]
+
+
+def dacl10kjtape_palette():
+    return [[0, 0, 230], [0, 0, 0]]
+
+
+def dacl10kdrainage_palette():
+    return [[0, 60, 100], [0, 0, 0]]
+
+
+def dacl10kejoint_palette():
+    return [[0, 0, 70], [0, 0, 0]]
+
+
+def dacl10kbearing_palette():
+    return [[0, 0, 142], [0, 0, 0]]
+
+
+def dacl10kexposedrebars_palette():
+    return [[255, 0, 0], [0, 0, 0]]
+
+def dacl10krestformwork_palette():
+    return [[220, 20, 60], [0, 0, 0]]
+
+
+def dacl10kweathering_palette():
+    return [[70, 130, 180], [0, 0, 0]]
+
+
+def dacl10kgraffiti_palette():
+    return [[152, 251, 152], [0, 0, 0]]
+
+
+def dacl10kcavity_palette():
+    return [[220, 220, 0], [0, 0, 0]]
+
+
+def dacl10khollowareas_palette():
+    return [[250, 170, 30], [0, 0, 0]]
+
+
+def dacl10krockpocket_palette():
+    return [[153, 153, 153], [0, 0, 0]]
+
+
+def dacl10kwetspot_palette():
+    return [[70, 70, 70], [0, 0, 0]]
+
+
+def dacl10kacrack_palette():
+    return [[244, 35, 232], [0, 0, 0]]
 
 
 def dacl10krust_palette():
@@ -548,11 +660,25 @@ dataset_aliases = {
     'mapillary_v2': ['mapillary_v2'],
     'bdd100k': ['bdd100k'],
     'dacl10k': ['dacl10k'],
-    'dacl10kefflor': ['dacl10kefflor'],
-    'dacl10kspall': ['dacl10kspall'],
-    'dacl10kpe': ['dacl10kpe'],
     'dacl10kcrack': ['dacl10kcrack'],
-
+    'dacl10kacrack': ['dacl10kacrack'],
+    'dacl10kwetspot': ['dacl10kwetspot'],
+    'dacl10kefflor': ['dacl10kefflor'],
+    'dacl10krust': ['dacl10krust'],
+    'dacl10krockpocket': ['dacl10krockpocket'],
+    'dacl10khollowareas': ['dacl10khollowareas'],
+    'dacl10kcavity': ['dacl10kcavity'],
+    'dacl10kspall': ['dacl10kspall'],
+    'dacl10kgraffiti': ['dacl10kgraffiti'],
+    'dacl10kweathering': ['dacl10kweathering'],
+    'dacl10krestformwork': ['dacl10krestformwork'],
+    'dacl10kexposedrebars': ['dacl10kexposedrebars'],
+    'dacl10kbearing': ['dacl10kbearing'],
+    'dacl10kejoint': ['dacl10kejoint'],
+    'dacl10kdrainage': ['dacl10kdrainage'],
+    'dacl10kpe': ['dacl10kpe'],
+    'dacl10kjtape': ['dacl10kjtape'],
+    'dacl10kwconccor': ['dacl10kwconccor'],
 }
 
 

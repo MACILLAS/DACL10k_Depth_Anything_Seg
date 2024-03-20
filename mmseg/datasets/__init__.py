@@ -6,7 +6,11 @@ from .bdd100k import BDD100KDataset
 from .chase_db1 import ChaseDB1Dataset
 from .cityscapes import CityscapesDataset
 from .coco_stuff import COCOStuffDataset
-from .dacl10k import Dacl10k, Dacl10kCrack, Dacl10kEfflor, Dacl10kRust, Dacl10kSpall, Dacl10kPE
+from .dacl10k import (Dacl10k, Dacl10kCrack, Dacl10kAcrack, Dacl10kWetspot, Dacl10kEfflor,
+                      Dacl10kRust, Dacl10kRockpocket, Dacl10kHollowareas, Dacl10kCavity,
+                      Dacl10kSpall, Dacl10kGraffiti, Dacl10kWeathering, Dacl10kRestformwork,
+                      Dacl10kExposedrebars, Dacl10kBearing, Dacl10kEjoint, Dacl10kDrainage, Dacl10kPE,
+                      Dacl10kJtape, Dacl10kWconccor)
 from .dark_zurich import DarkZurichDataset
 from .dataset_wrappers import MultiImageMixDataset
 from .decathlon import DecathlonDataset
@@ -62,5 +66,9 @@ __all__ = [
     'MapillaryDataset_v2', 'Albu', 'LEVIRCDDataset',
     'LoadMultipleRSImageFromFile', 'LoadSingleRSImageFromFile',
     'ConcatCDInput', 'BaseCDDataset', 'DSDLSegDataset', 'BDD100KDataset',
-    'NYUDataset', 'Dacl10k', 'Dacl10kCrack', 'Dacl10kEfflor', 'Dacl10kRust', 'Dacl10kSpall', 'Dacl10kPE'
+    'NYUDataset', 'Dacl10k', 'Dacl10kCrack', 'Dacl10kAcrack', 'Dacl10kWetspot',
+    'Dacl10kEfflor', 'Dacl10kRust', 'Dacl10kRockpocket', 'Dacl10kHollowareas',
+    'Dacl10kCavity', 'Dacl10kSpall', 'Dacl10kGraffiti', 'Dacl10kWeathering',
+    'Dacl10kRestformwork', 'Dacl10kExposedrebars', 'Dacl10kBearing', 'Dacl10kEjoint',
+    'Dacl10kDrainage', 'Dacl10kPE', 'Dacl10kJtape', 'Dacl10kWconccor',
 ]
